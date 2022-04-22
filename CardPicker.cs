@@ -8,6 +8,7 @@ namespace PickRandomCards
 {
     internal class CardPicker
     {
+        static Random random = new Random();
         public static string[] pickSomeCards(int numOfCards)
         {
             string[] pickedCards = new string[numOfCards];
@@ -18,12 +19,25 @@ namespace PickRandomCards
             return pickedCards;
         }
 
-        public static string randomValue()
+        public static string randomSuit()
         {
-            return "";
+            int randomIntegerValue = random.Next(1, 5);  //generate a random integer value from 1 to 4
+            if (randomIntegerValue == 1)
+            {
+                return "Spades";
+            }
+            if (randomIntegerValue == 2)
+            {
+                return "Hearts";
+            }
+            if (randomIntegerValue == 3)
+            {
+                return "Clubs";
+            }
+            return "Diamonds";
         }
 
-        public static string randomSuit()
+        public static string randomValue()
         {
             return "";
         }
