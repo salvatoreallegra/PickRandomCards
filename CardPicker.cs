@@ -39,7 +39,24 @@ namespace PickRandomCards
 
         public static string randomValue()
         {
-            return "";
+           int randomValue = random.Next(1, 14);
+            if(randomValue == 1)
+            {
+                return "A";
+            }
+            if (randomValue == 2)
+            {
+                return "K";
+            }
+            if (randomValue == 3)
+            {
+                return "Q";
+            }
+            if (randomValue == 4)
+            {
+                return "J";
+            }
+            return randomValue.ToString();
         }
         
     }
