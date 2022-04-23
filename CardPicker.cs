@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PickRandomCards
 {
-    internal class CardPicker
+    public class CardPicker
     {
         static Random random = new Random();
-        public static string[] pickSomeCards(int numOfCards)
+        public  string[] pickSomeCards(int numOfCards)
         {
             string[] pickedCards = new string[numOfCards];
             for (int i = 0; i < numOfCards; i++)
@@ -19,7 +19,7 @@ namespace PickRandomCards
             return pickedCards;
         }
 
-        public static string randomSuit()
+        public string randomSuit()
         {
             int randomIntegerValue = random.Next(1, 5);  //generate a random integer value from 1 to 4
             if (randomIntegerValue == 1)
@@ -44,15 +44,15 @@ namespace PickRandomCards
             {
                 return "A";
             }
-            if (randomValue == 2)
+            if (randomValue == 13)
             {
                 return "K";
             }
-            if (randomValue == 3)
+            if (randomValue == 12)
             {
                 return "Q";
             }
-            if (randomValue == 4)
+            if (randomValue == 11)
             {
                 return "J";
             }
